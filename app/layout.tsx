@@ -1,16 +1,10 @@
 import type { Metadata } from 'next'
-import { Geist, Inter, Playfair_Display } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { Navigation } from '@/components/navigation';
 
 
-
-const geist = Geist({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
 
 const inter = Inter({
   subsets: ["latin"],

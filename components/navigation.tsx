@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
@@ -16,27 +16,10 @@ const navLinks = [
 
 export function Navigation({ bgColorClass = "bg-white", textColorClass = "text-black" }: { bgColorClass?: string, textColorClass?: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
 
   // Filter out the link for the current active page
   const filteredLinks = navLinks.filter((link) => link.href !== pathname)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // The hero section is approximately 100vh.
-      // We switch to "dark bg / white text" theme once we scroll past it.
-      if (window.scrollY > window.innerHeight * 0.8) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
-    }
-
-    handleScroll() // Initial check
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
 
 

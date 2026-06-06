@@ -24,9 +24,9 @@ const HeroBackground = ({
       alt={alt}
       style={{ objectPosition: position }}
       fill
+      sizes="100vw"
       className="object-cover"
       priority
-      unoptimized
     />
     {overlayClassName && (
       <div className={cn('absolute inset-0 z-10', overlayClassName)} />
