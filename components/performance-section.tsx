@@ -9,8 +9,9 @@ export function PerformanceSection() {
           src="/pr.png"
           alt="Professional team in a modern office boardroom"
           fill
+          sizes="100vw"
           className="object-cover opacity-60"
-          priority
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>

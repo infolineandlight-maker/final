@@ -27,6 +27,7 @@ export function DifferenceSection() {
         muted
         loop
         playsInline
+        preload="metadata"
         aria-hidden="true"
       />
 
